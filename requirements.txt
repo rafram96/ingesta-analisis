@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pandas
+boto3
+pymongo
+python-multipart
+matplotlib
+seaborn
+scikit-learn
