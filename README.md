@@ -16,7 +16,6 @@ Asegúrate de tener todos los archivos en un mismo directorio:
 - `main.py` (código fuente de la API)
 - `requirements.txt` (dependencias)
 - `Dockerfile` (instrucciones para construir la imagen)
-- `docker-compose.yml` (configuración para ejecutar servicios)
 - `movimiento_inventario.csv` (datos de ejemplo)
 
 ### 2. Construir la imagen Docker
@@ -24,7 +23,7 @@ Puedes construir la imagen de dos maneras:
 
 **Opción 1:** Usando Docker directamente
 ```bash
-docker build -t smartstock-api .
+docker build -t smartstock-api-analytics .
 ```
 
 **Opción 2:** Usando Docker Compose
@@ -46,22 +45,15 @@ Accede a la API en tu navegador o mediante herramientas como cURL o Postman:
 http://localhost:8000/
 ```
 
-### 5. Sincronizar los datos del CSV
-Para cargar los datos del CSV en la base de datos, haz una petición POST al endpoint de sincronización:
-```bash
-curl -X POST http://localhost:8000/sync
-```
-
-O accede a esta URL en tu navegador:
-```
-http://localhost:8000/sync
-```
-
-### 6. Explorar los datos
+### 5. Explorar los datos
 Después de sincronizar, puedes acceder a las siguientes rutas:
-- Productos más vendidos: `http://localhost:8000/ventas/top`
-- Alertas de stock: `http://localhost:8000/stock/alertas`
-- Estacionalidad de ventas: `http://localhost:8000/ventas/estacionalidad`
+- Productos más vendidos: `http://localhost:8082/ventas/top`
+- Alertas de stock: `http://localhost:8082/stock/alertas`
+- Estacionalidad de ventas: `http://localhost:8082/ventas/estacionalidad`
+
+
+
+
 
 ## Subir la imagen a Docker Hub (Opcional)
 
