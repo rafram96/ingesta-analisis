@@ -3,7 +3,7 @@ import pandas as pd
 from pymongo import MongoClient
 
 # --- Configuraciones ---
-BUCKET_NAME = 'proy'
+BUCKET_NAME = 'proy-cloud-bucket'
 ANALISIS_FOLDER = 'Analisis/'
 
 # --- Conexiones ---
