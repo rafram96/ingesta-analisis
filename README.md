@@ -6,7 +6,6 @@ smartstock-api/
 ├── main.py
 ├── requirements.txt
 ├── Dockerfile
-├── docker-compose.yml
 └── movimiento_inventario.csv
 ```
 
